@@ -11,6 +11,13 @@ app_color = "#589494"
 app_email = "info@grintsys.com"
 app_license = "GNU Genereal Public License"
 
+override_whitelisted_methods = {
+	"frappe.desk.moduleview.get": "leaf_develop.moduleview.get_accounts_module_data",
+	"frappe.desk.query_report.get_script": "leaf_develop.query_report_overrides.get_script",
+	"frappe.desk.query_report.run": "leaf_develop.query_report_overrides.run",
+	"frappe.desk.query_report.export_query": "leaf_develop.query_report_overrides.export_query"
+}
+
 # Includes in <head>
 # ------------------
 
